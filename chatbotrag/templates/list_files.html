@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Uploaded Files</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .dataset {
+            margin-bottom: 2em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .dataset h2 {
+            margin-top: 0;
+        }
+        .files {
+            margin-left: 2em;
+        }
+        .files li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Uploaded Datasets</h1>
+        {% if datasets %}
+            {% for dataset in datasets %}
+                <div class="dataset">
+                    <h2>Dataset Name: {{ dataset.dataset_name }}</h2>
+                    <p>Domain: {{ dataset.domain }}</p>
+                    <h3>Files:</h3>
+                    <ul class="files">
+                        {% for file in dataset.files %}
+                            <li>{{ file }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No files uploaded.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <style>
+        .container {
+            width: 50%;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 1em;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+        input[type="text"],
+        input[type="checkbox"] {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 0.5em;
+        }
+        button {
+            padding: 0.5em 1em;
+        }
+        .response {
+            margin-top: 2em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chat with Bot</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="user_query">Enter your query:</label>
+                <input type="text" id="user_query" name="user_query" required>
+            </div>
+            <div class="form-group">
+                <label for="use_files">Include files context:</label>
+                <input type="checkbox" id="use_files" name="use_files">
+            </div>
+            <div class="form-group">
+                <label>Select files to include in context:</label>
+                {% for dataset in uploaded_files %}
+                    <h3>Dataset: {{ dataset.dataset_name }} ({{ dataset.domain }})</h3>
+                    {% for file in dataset.files %}
+                        <div>
+                            <input type="checkbox" name="files" value="{{ file }}" id="{{ file }}">
+                            <label for="{{ file }}">{{ file }}</label>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        {% if response %}
+            <div class="response">
+                <h2>Response:</h2>
+                <p>{{ response }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

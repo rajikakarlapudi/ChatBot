@@ -1,0 +1,39 @@
+[
+    {
+        "dataset_name": "data analsyis algorithm",
+        "domain": "Education",
+        "files": [
+            "DAA Unit-1 Introduction-1.pdf",
+            "DAA Unit-1 Introduction-2.pdf",
+            "DAA Unit-1 notes.pdf",
+            "DAA Unit-2 D&C and Greedy R20.pdf",
+            "DAA Unit-4 notes.pdf",
+            "DAA Unit-5 P-NP-CooksTheorm R20.pdf",
+            "DAA_R20_Unit-3_Slides(2PerPage).pdf",
+            "DAA_R20_Unit-4_Slides(2PerPage).pdf"
+        ]
+    },
+    {
+        "dataset_name": "data analsyis algorithm",
+        "domain": "Education",
+        "files": [
+            "DAA Unit-3 Dynamic Programming R20.pdf",
+            "DAA Unit-3 notes.pdf",
+            "DAA Unit-4 notes.pdf",
+            "DAA Unit-5 P-NP-CooksTheorm R20.pdf",
+            "DAA_R20_Unit-3_Slides(2PerPage).pdf",
+            "DAA_R20_Unit-4_Slides(2PerPage).pdf",
+            "dataset1.zip"
+        ]
+    },
+    {
+        "dataset_name": "data analsyis algorithm",
+        "domain": "Education",
+        "files": [
+            "DMDW-R20-Unit-3.pdf",
+            "DMDW-R20-Unit-4.pdf",
+            "DWDM Unit 2.pdf",
+            "DWDM Unit 3.pdf"
+        ]
+    }
+]

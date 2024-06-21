@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.core.files.storage import FileSystemStorage
 
 # Set your OpenAI API key
-openai.api_key = 'add in furture'
+openai.api_key = settings.API_KEY
 
 
 # Path to the metadata file
